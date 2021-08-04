@@ -11,8 +11,12 @@ const Cart = ({ onHide }) => {
   const totalAmount = `$${cartContext.totalAmount.toFixed(2)}`;
   const hasItems = cartContext.items.length > 0;
 
-  const itemRemoveHandler = (id) => {};
-  const itemAddHandler = (item) => {};
+  const itemAddHandler = (item) => {
+    cartContext.addItem(item);
+  };
+  const itemRemoveHandler = (id) => {
+    cartContext.removeItem(id);
+  };
 
   const cartItems = (
     <ul className={classes["cart-items"]}>
