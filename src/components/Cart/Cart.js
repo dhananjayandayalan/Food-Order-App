@@ -44,7 +44,14 @@ const Cart = ({ onHide }) => {
         <button className={classes["button--alt"]} onClick={onHide}>
           Close
         </button>
-        {hasItems && <button className={classes.button}>Order</button>}
+        {hasItems && (
+          <button
+            className={classes.button}
+            onClick={() => console.log("Need to add this feature in future")}
+          >
+            Order
+          </button>
+        )}
       </div>
     </Modal>
   );
